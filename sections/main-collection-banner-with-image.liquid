@@ -1,0 +1,183 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+{{ 'collection-description-mobile.js' | asset_url | script_tag }}
+
+{%- style -%}
+  .collection__banner__ctr {
+    width: 100%;
+  }
+
+  .collection__banner__text_ctr {
+    padding: 40px;
+    background-color: #F4F4F4;
+  }
+
+  .collection__banner__description__ctr{
+    max-height: 30px;
+    overflow: hidden;
+  }
+
+
+  .collection__banner__description__read_more {
+    text-decoration: underline;
+  }
+
+  .collection__banner__description__read_less{
+    text-decoration: underline;
+    display: none;
+  }
+
+  .collection__banner__description__read_more__div {
+    margin-top: 20px;
+  }
+
+  @media screen and (min-width: 749px) {
+    .collection__banner__ctr {
+    width: 100%;
+    background-image: url("https://cdn.shopify.com/s/files/1/0563/1747/7060/files/cbdfx-photo-lifestyle-balmsticks-05-jan-05-2021.jpg?v=1664989326");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+  }
+
+  .collection__banner__text_ctr {
+    padding: 40px 80px 40px 40px;
+    width: 80%;
+    background-color: #F4F4F4;
+    clip-path: polygon(0% 0%,85% 0%,100% 100%,0% 100%);
+  }
+
+  .collection__banner__description__ctr{
+    max-height: none;
+    overflow: visable;
+  }
+
+  .collection__banner__description__read_more__div {
+    display: none;
+  }  
+  }
+
+
+  @media screen and (max-width: 749px) {
+    .collection-hero--with-image .collection-hero__inner {
+      padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
+    }
+  }
+{%- endstyle -%}
+
+
+<div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
+  <div class="collection-hero__inner page-width">
+    
+    
+    <div class="collection__banner__ctr">
+      <div class="collection__banner__text_ctr">
+
+        <div class="collection-hero__text-wrapper">
+          {% render 'breadcrumbs' %}
+          <h1 class="collection-hero__title">
+            <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+            {{- collection.title | escape -}}
+          </h1>
+
+          <div class="collection__banner__description__ctr">
+            {%- comment -%} TEST DESCRIPTION TEXT {%- endcomment -%}
+             Looking to add a drop of wellness to your life? We don’t blame you. Lorem ipsum this is a test sentence. Lorem ipsum this is a test sentence. Lorem ipsum this is a test sentence. Lorem ipsum this is a test sentence.
+            {%- comment -%} TEST DESCRIPTION TEXT {%- endcomment -%}
+          </div>
+          
+
+          {%- comment -%} READ MORE DESCRIPTION MOBILE {%- endcomment -%}
+          <div class="collection__banner__description__read_more__div">
+            <span onclick="showDescription()" class="collection__banner__description__read_more">Read More</span>
+            <span onclick="hideDescription()" class="collection__banner__description__read_less">Read Less</span>
+          </div>
+          {%- comment -%} READ MORE DESCRIPTION MOBILE {%- endcomment -%}
+
+          {%- if section.settings.show_collection_description -%}
+            <div class="collection-hero__description rte">{{ collection.description }}</div>
+
+            
+            
+          {%- endif -%}
+        </div>
+
+      </div>
+    </div>
+    
+
+
+    {%- if section.settings.show_collection_image and collection.image -%}
+      <div class="collection-hero__image-container media gradient">
+        <img
+          srcset="{%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
+            {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
+            {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
+            {%- if collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
+            {%- if collection.image.width >= 1070 -%}{{ collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+            {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+            {{ collection.image | image_url }} {{ collection.image.width }}w"
+          src="{{ collection.image | image_url: width: 750 }}"
+          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
+          alt=""
+          width="{{ collection.image.width }}"
+          height="{{ collection.image.height }}"
+        >
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-collection-banner.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-collection-banner.settings.paragraph.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_description",
+      "default": true,
+      "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_image",
+      "default": false,
+      "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
+      "info": "t:sections.main-collection-banner.settings.show_collection_image.info"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    }
+  ]
+}
+{% endschema %}

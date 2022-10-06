@@ -1,5 +1,15 @@
 {
   "sections": {
+    "collection_bar": {
+      "type": "collection-bar",
+      "settings": {
+      }
+    },
+    "icon_list": {
+      "type": "icon-list",
+      "settings": {
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -201,7 +211,9 @@
     }
   },
   "order": [
+    "collection_bar",
     "image_banner",
+    "icon_list",
     "rich_text",
     "featured_collection",
     "collage",

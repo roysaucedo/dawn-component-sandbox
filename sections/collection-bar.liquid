@@ -1,0 +1,83 @@
+<style>
+    .collection-bar-ctr {
+      display: flex;
+      margin: 10px 0;
+      overflow-x: auto;
+      padding: 10px 0;
+      cursor: grab;
+    }
+  
+    .collection-bar-btn {
+      text-transform: capitalize;
+      text-decoration: none;
+      letter-spacing: 0.75px;
+      text-transform: uppercase;
+      border: 1px solid #333;
+      border-radius: 20px;
+      color: #333;
+      padding: 8px 18px;
+      transition: all 200ms ease-in-out;
+      white-space: nowrap;
+      margin: 0 10px;
+    }
+  
+    .collection-bar-btn:hover {
+      color: white;
+      background-color: #396886;
+    }
+  
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    
+  
+    @media only screen and (min-width: 768px) {
+      .collection-bar-ctr {
+        max-width: 1440px;
+        margin: 10px auto;
+        justify-content: center;
+      }
+    }
+  </style>
+  
+  {%- comment -%}
+    {% if section.blocks.collection_url != blank %}{% endif %}
+  {%- endcomment -%}
+  
+  <div class="collection-bar-ctr page-width drag-scroll">
+    {% for block in section.blocks %}
+      <div>
+        <a href="{{ block.settings.collection_url }}" class="collection-bar-btn">{{ block.settings.collection_button_text }}
+        </a>
+      </div>
+    {% endfor %}
+  
+  </div>
+  
+  
+  
+  {% schema %}
+    {
+      "name": "Collection Bar",
+      "settings": [],
+      "blocks": [
+        {
+          "name": "Collection Button",
+          "type": "collection_btn",
+          "settings": [
+            {
+              "type": "text",
+              "id": "collection_button_text",
+              "label": "Collection button text",
+              "default": "Collection"
+            }, {
+              "type": "url",
+              "id": "collection_url",
+              "label": "Collection Url"
+            }
+          ]
+        }
+      ]
+    }
+  {% endschema %}
+  
