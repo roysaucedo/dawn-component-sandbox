@@ -1,0 +1,124 @@
+<script>
+  document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '.splide', {
+      perPage: 4,
+      breakpoints: {
+        1024: {
+          perPage: 3,
+         
+        },
+        767: {
+          perPage: 2,
+      
+        },
+        640: {
+          perPage: 1,
+    
+        },
+      },
+      type: 'loop',
+      pagination: false,
+      perMove: 1,
+      drag: true
+    } ).mount();
+  } );
+</script>
+
+<style>
+  .featured__slider__ctr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0;
+  }
+  .featured__slider{
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px 0;
+  }
+
+  .featured__slide__image__li {
+    display: flex;
+    justify-content: center;
+  }
+
+  .featured__slide__image {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+  }
+    
+    
+  
+    @media only screen and (min-width: 768px) {
+      
+      }
+    }
+  </style>
+  
+
+  
+  <div class="featured__slider__ctr">
+    <h2 class="rich-text__heading rte h1">{{ section.settings.featured_heading_text }}</h2>
+    <div class="splide featured__slider">
+      <div class="splide__slider">
+        <div class="splide__track">
+         
+            <ul class="splide__list">
+              {% for block in section.blocks %}
+                <li class="splide__slide featured__slide__image__li">
+                  <img class="featured__slide__image" src="{{ block.settings.image | img_url: 'large' }}" alt="{{ block.settings.image.alt | escape }}">
+                </li>
+              {% endfor %}  
+            </ul>
+
+          
+        </div>
+      </div>
+      
+    </div>
+    
+    <a class="button" href="{{ section.settings.button_url }}">{{ section.settings.button_label }}</a>
+  </div>
+  
+  
+  
+  {% schema %}
+    {
+      "name": "Featured On Slider",
+      "settings": [
+        {
+          "type": "text",
+          "id": "featured_heading_text",
+          "label": "Heading text",
+          "default": "We've been featured on"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "View more"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button link"
+        }
+      ],
+      "blocks": [
+        {
+          "name": "Featured Image",
+          "type": "image",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Featured image"
+            }
+          ]
+        }
+      ]
+    }
+  {% endschema %}
+  
