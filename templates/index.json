@@ -114,6 +114,42 @@
     },
     "icon_list": {
       "type": "icon-list",
+      "blocks": {
+        "5a70d06f-7637-4fc2-9daa-6f73911378d6": {
+          "type": "icon-image",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/icons8-last-24-hours-64.png",
+            "icon_label": "24 Hour Customer Support"
+          }
+        },
+        "c94ce64b-11a3-49af-ad79-691d135fe0ce": {
+          "type": "icon-image",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/icons8-handshake-64.png",
+            "icon_label": "Satisfaction Guaranteed"
+          }
+        },
+        "d655ee5d-fe96-49b7-bc81-c11be3304c9b": {
+          "type": "icon-image",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/icons8-card-security-64.png",
+            "icon_label": "Secure Checkout"
+          }
+        },
+        "cac8d2aa-d78f-432e-a8cc-fe22ba5c97d3": {
+          "type": "icon-image",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/icons8-in-transit-64.png",
+            "icon_label": "2-Day Shipping"
+          }
+        }
+      },
+      "block_order": [
+        "5a70d06f-7637-4fc2-9daa-6f73911378d6",
+        "c94ce64b-11a3-49af-ad79-691d135fe0ce",
+        "d655ee5d-fe96-49b7-bc81-c11be3304c9b",
+        "cac8d2aa-d78f-432e-a8cc-fe22ba5c97d3"
+      ],
       "settings": {
       }
     },
