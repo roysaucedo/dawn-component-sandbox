@@ -2,6 +2,42 @@
   "sections": {
     "collection_bar": {
       "type": "collection-bar",
+      "blocks": {
+        "fbb6e02f-e4c7-48b1-9d14-a284296bacf4": {
+          "type": "collection_btn",
+          "settings": {
+            "collection_button_text": "Collection",
+            "collection_url": ""
+          }
+        },
+        "ecf48f78-7032-4423-a5bc-b04d67365ac1": {
+          "type": "collection_btn",
+          "settings": {
+            "collection_button_text": "Collection",
+            "collection_url": ""
+          }
+        },
+        "ce249ee1-e6d8-4f23-a63b-5cb2591a3d67": {
+          "type": "collection_btn",
+          "settings": {
+            "collection_button_text": "Collection",
+            "collection_url": ""
+          }
+        },
+        "af266ec6-9aed-4af3-9847-30ad9d9803ca": {
+          "type": "collection_btn",
+          "settings": {
+            "collection_button_text": "Collection",
+            "collection_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "fbb6e02f-e4c7-48b1-9d14-a284296bacf4",
+        "ecf48f78-7032-4423-a5bc-b04d67365ac1",
+        "ce249ee1-e6d8-4f23-a63b-5cb2591a3d67",
+        "af266ec6-9aed-4af3-9847-30ad9d9803ca"
+      ],
       "settings": {
       }
     },
