@@ -49,6 +49,18 @@
     "featured_on_slider": {
       "type": "featured-on-slider",
       "blocks": {
+        "ab224bc4-6c0a-4d29-afca-d6369ec30a59": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/merchant-taking-sale-with-chip-and-swipe-reader.jpg"
+          }
+        },
+        "6a209189-f34f-4294-b9db-548f1414d322": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/merchant-taking-sale-with-chip-and-swipe-reader.jpg"
+          }
+        },
         "c04325cd-6d98-4bce-ade5-e83b8f352663": {
           "type": "image",
           "settings": {
@@ -61,31 +73,19 @@
             "image": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg"
           }
         },
-        "ab224bc4-6c0a-4d29-afca-d6369ec30a59": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/merchant-taking-sale-with-chip-and-swipe-reader.jpg"
-          }
-        },
         "639652b9-6cdc-4ed6-9098-af0e233007c3": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/barista-pours-over-coffee-at-cafe.jpg"
           }
-        },
-        "6a209189-f34f-4294-b9db-548f1414d322": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/merchant-taking-sale-with-chip-and-swipe-reader.jpg"
-          }
         }
       },
       "block_order": [
+        "ab224bc4-6c0a-4d29-afca-d6369ec30a59",
+        "6a209189-f34f-4294-b9db-548f1414d322",
         "c04325cd-6d98-4bce-ade5-e83b8f352663",
         "40fca146-27e1-4661-bb65-4491084b27cd",
-        "ab224bc4-6c0a-4d29-afca-d6369ec30a59",
-        "639652b9-6cdc-4ed6-9098-af0e233007c3",
-        "6a209189-f34f-4294-b9db-548f1414d322"
+        "639652b9-6cdc-4ed6-9098-af0e233007c3"
       ],
       "settings": {
         "featured_heading_text": "We've been featured on",
