@@ -58,17 +58,17 @@
             "icon_label": "Label"
           }
         },
-        "377ee4bf-4205-4700-9277-5f5bd3cbf922": {
-          "type": "icon-image",
-          "settings": {
-            "icon_image": "shopify:\/\/shop_images\/bolt_FILL0_wght400_GRAD0_opsz48.png",
-            "icon_label": "Label"
-          }
-        },
         "36525203-fae8-4411-bcac-57db872b5d98": {
           "type": "icon-image",
           "settings": {
             "icon_image": "shopify:\/\/shop_images\/grade_FILL0_wght400_GRAD0_opsz48.png",
+            "icon_label": "Label"
+          }
+        },
+        "377ee4bf-4205-4700-9277-5f5bd3cbf922": {
+          "type": "icon-image",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/bolt_FILL0_wght400_GRAD0_opsz48.png",
             "icon_label": "Label"
           }
         }
@@ -76,8 +76,8 @@
       "block_order": [
         "833d6fc4-e5cc-4fad-9b29-bcc95864f1ad",
         "fad0979b-bc14-4424-a9ee-9c645480d75c",
-        "377ee4bf-4205-4700-9277-5f5bd3cbf922",
-        "36525203-fae8-4411-bcac-57db872b5d98"
+        "36525203-fae8-4411-bcac-57db872b5d98",
+        "377ee4bf-4205-4700-9277-5f5bd3cbf922"
       ],
       "settings": {
       }
