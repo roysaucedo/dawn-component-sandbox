@@ -2,6 +2,34 @@
   "sections": {
     "collection_bar": {
       "type": "collection-bar",
+      "blocks": {
+        "ffed60db-2a4f-4c24-a6c2-08060e00cf6b": {
+          "type": "collection_btn",
+          "settings": {
+            "collection_button_text": "Collection",
+            "collection_url": ""
+          }
+        },
+        "0ee6ccd0-5010-4beb-bc3f-3977f204f935": {
+          "type": "collection_btn",
+          "settings": {
+            "collection_button_text": "Collection",
+            "collection_url": ""
+          }
+        },
+        "74ad90ea-c711-4c73-88e8-2d320e01a891": {
+          "type": "collection_btn",
+          "settings": {
+            "collection_button_text": "Collection",
+            "collection_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "ffed60db-2a4f-4c24-a6c2-08060e00cf6b",
+        "0ee6ccd0-5010-4beb-bc3f-3977f204f935",
+        "74ad90ea-c711-4c73-88e8-2d320e01a891"
+      ],
       "settings": {
       }
     },
