@@ -2,42 +2,6 @@
   "sections": {
     "collection_bar": {
       "type": "collection-bar",
-      "blocks": {
-        "fbb6e02f-e4c7-48b1-9d14-a284296bacf4": {
-          "type": "collection_btn",
-          "settings": {
-            "collection_button_text": "Collection",
-            "collection_url": ""
-          }
-        },
-        "ecf48f78-7032-4423-a5bc-b04d67365ac1": {
-          "type": "collection_btn",
-          "settings": {
-            "collection_button_text": "Collection",
-            "collection_url": ""
-          }
-        },
-        "ce249ee1-e6d8-4f23-a63b-5cb2591a3d67": {
-          "type": "collection_btn",
-          "settings": {
-            "collection_button_text": "Collection",
-            "collection_url": ""
-          }
-        },
-        "af266ec6-9aed-4af3-9847-30ad9d9803ca": {
-          "type": "collection_btn",
-          "settings": {
-            "collection_button_text": "Collection",
-            "collection_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "fbb6e02f-e4c7-48b1-9d14-a284296bacf4",
-        "ecf48f78-7032-4423-a5bc-b04d67365ac1",
-        "ce249ee1-e6d8-4f23-a63b-5cb2591a3d67",
-        "af266ec6-9aed-4af3-9847-30ad9d9803ca"
-      ],
       "settings": {
       }
     },
@@ -108,13 +72,20 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/barista-pours-over-coffee-at-cafe.jpg"
           }
+        },
+        "6a209189-f34f-4294-b9db-548f1414d322": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/merchant-taking-sale-with-chip-and-swipe-reader.jpg"
+          }
         }
       },
       "block_order": [
         "c04325cd-6d98-4bce-ade5-e83b8f352663",
         "40fca146-27e1-4661-bb65-4491084b27cd",
         "ab224bc4-6c0a-4d29-afca-d6369ec30a59",
-        "639652b9-6cdc-4ed6-9098-af0e233007c3"
+        "639652b9-6cdc-4ed6-9098-af0e233007c3",
+        "6a209189-f34f-4294-b9db-548f1414d322"
       ],
       "settings": {
         "featured_heading_text": "We've been featured on",
